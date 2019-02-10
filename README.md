@@ -63,7 +63,7 @@ start<ExampleActivity>() {
 
 // If you want to get result from activity, you have to provide a request code
 startForResult<ExampleActivity>(123, item.asArg())
-// To wrap argument as result just use
+// To wrap argument as result just use "asIntent" extension
 val result = item.asArg().asIntent()
 
 // Create a fragment
@@ -77,7 +77,7 @@ __Only primitives, Serializable or Parcelable arguments allowed.__
 
 The MIT License
 
-Copyright (c) 2010-2018 Google, Inc.
+Copyright (c) 2010-2019 Google, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
