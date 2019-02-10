@@ -1,4 +1,4 @@
-package d.uporov.easyargs
+package com.github.udy18rus.easyargs
 
 import android.app.Activity
 import android.content.Context

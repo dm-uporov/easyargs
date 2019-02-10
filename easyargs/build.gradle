@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+
+ext.lib_version = '0.0.2'
 
 android {
     compileSdkVersion 28
@@ -8,8 +12,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 1
-        versionName "0.1"
+        versionCode 2
+        versionName "$lib_version"
     }
 }
 
@@ -17,4 +21,18 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+publish {
+    bintrayUser = properties.getProperties().get("bintray.user")
+    bintrayKey = properties.getProperties().get("bintray.apikey")
+
+    userOrg = 'udy18rus'
+    groupId = 'com.github.udy18rus'
+    artifactId = 'easyargs'
+    publishVersion = "$lib_version"
+    desc = 'Easy navigation in Android by Kotlin'
+    website = 'https://github.com/udy18rus/easyargs'
+    licences = ['MIT']
+    dryRun = false
 }

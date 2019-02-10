@@ -1,4 +1,4 @@
-package d.uporov.easyargs
+package com.github.udy18rus.easyargs
 
 import android.os.Bundle
 import android.os.Parcelable
