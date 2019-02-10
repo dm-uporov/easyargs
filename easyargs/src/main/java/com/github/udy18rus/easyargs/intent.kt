@@ -73,20 +73,7 @@ inline fun <reified T : AppCompatActivity> Fragment.startForResult(
 inline fun <reified T : AppCompatActivity> Context.createIntent(
     vararg items: ArgumentWithKey<*>,
     intentSettings: Intent.() -> Unit = {}
-): Intent =
-    createIntent<T>(intentSettings).apply {
-        for (item in items) {
-            when (item.arg) {
-                null -> Unit
-                is Serializable -> this.with(item.arg, item.key)
-                is Parcelable -> this.with(item.arg, item.key)
-                else -> throw IllegalArgumentException(
-                    "Class ${item.arg::class} must implement " +
-                            Parcelable::class + " or " + Serializable::class
-                )
-            }
-        }
-    }
+): Intent = createIntent<T>(intentSettings).renderArguments(*items)
 
 inline fun <reified T : AppCompatActivity> Context.createIntent(intentSettings: Intent.() -> Unit = {}) =
     Intent(this, T::class.java).apply(intentSettings)
