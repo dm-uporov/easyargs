@@ -1,32 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
 
-    <android.support.v7.widget.AppCompatCheckBox
-            android:layout_width="200dp"
-            android:id="@+id/checkBoxWithArgument"
-            android:text="With argument"
-            android:layout_height="48dp"/>
-    <Button
-            android:id="@+id/startActivityButton"
-            android:text="Start Activity"
-            android:layout_marginTop="8dp"
-            android:layout_width="200dp"
-            android:layout_height="48dp"/>
-    <Button
-            android:id="@+id/startFragmentButton"
-            android:text="Start Fragment"
-            android:layout_width="200dp"
-            android:layout_marginTop="8dp"
-            android:layout_height="48dp"/>
-    <Button
-            android:id="@+id/startServiceButton"
-            android:text="Start Service"
-            android:layout_width="200dp"
-            android:layout_marginTop="8dp"
-            android:layout_height="48dp"/>
-</LinearLayout>
+        <android.support.v7.widget.AppCompatCheckBox
+                android:layout_width="200dp"
+                android:id="@+id/checkBoxWithArgument"
+                android:text="With argument"
+                android:layout_height="48dp"/>
+        <Button
+                android:id="@+id/startActivityButton"
+                android:text="Start Activity"
+                android:layout_marginTop="8dp"
+                android:layout_width="200dp"
+                android:layout_height="48dp"/>
+        <Button
+                android:id="@+id/startFragmentButton"
+                android:text="Start Fragment"
+                android:layout_width="200dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="48dp"/>
+
+        <EditText
+                android:id="@+id/timeForService"
+                android:text="5"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="32dp"
+                android:inputType="numberDecimal"
+                android:hint="Time in seconds"/>
+
+        <Button
+                android:id="@+id/startServiceButton"
+                android:text="Start Timer Service"
+                android:layout_width="200dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="48dp"/>
+
+        <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</ScrollView>

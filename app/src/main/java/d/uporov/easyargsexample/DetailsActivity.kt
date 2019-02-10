@@ -2,7 +2,7 @@ package d.uporov.easyargsexample
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import d.uporov.easyargs.getArgOrNull
+import com.github.udy18rus.easyargs.getArgOrNull
 import kotlinx.android.synthetic.main.layout_details.*
 
 class DetailsActivity : AppCompatActivity() {

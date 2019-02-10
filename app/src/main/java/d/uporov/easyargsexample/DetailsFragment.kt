@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import d.uporov.easyargs.getArgOrNull
+import com.github.udy18rus.easyargs.getArgOrNull
 import kotlinx.android.synthetic.main.layout_details.*
 
 class DetailsFragment: Fragment() {
