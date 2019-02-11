@@ -4,7 +4,7 @@ apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-ext.lib_version = '0.0.2'
+ext.lib_version = '0.0.3'
 
 android {
     compileSdkVersion 28
@@ -24,8 +24,8 @@ dependencies {
 }
 
 publish {
-    bintrayUser = properties.getProperties().get("bintray.user")
-    bintrayKey = properties.getProperties().get("bintray.apikey")
+    bintrayUser = System.getenv("BINTRAY_USER") ?: BINTRAY_USER
+    bintrayKey = System.getenv("BINTRAY_API_KEY") ?: BINTRAY_API_KEY
 
     userOrg = 'udy18rus'
     groupId = 'com.github.udy18rus'
